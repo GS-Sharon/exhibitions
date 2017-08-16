@@ -8,7 +8,7 @@
 			$routeProvider
 				.when("/:category/:page?",{
 					controller: "movieController",
-					templateUrl: "view.html"
+					templateUrl: "movieList/view.html"
 				})
 		}])
 		.controller("movieController",["$scope","HttpService","$routeParams","$route",function($scope,HttpService,$routeParams,$route) {
