@@ -14,9 +14,6 @@
 		.controller("movieController",["$scope","HttpService","$routeParams","$route",function($scope,HttpService,$routeParams,$route) {
 			//获取当前的页数
 			$scope.page = $routeParams.page;
-			if(typeof $scope.page == "undefined") {
-				$route.updateParams({page:1});
-			}
 			//设置一页有cont条
 			$scope.count = 10;
 			//设置请求从第start条开始
@@ -24,7 +21,7 @@
 			//设置loading
 			$scope.loading = true;
 			//跨域开始
-			HttpService.jsonp("https://api.douban.com/v2/movie/"+ $routeParams.category,{start:$scope.start,count:$scope.count},function(data) {
+			HttpService.jsonp("https://api.douban.com/v2/movie/"+ $routeParams.category,{start:$scope.start,count:$scope.count,q:$routeParams.q},function(data) {
 				$scope.data = data;
 				//标题
 				$scope.title = $scope.data.title;
