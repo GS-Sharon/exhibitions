@@ -13,7 +13,6 @@
 			HttpService.jsonp("https://api.douban.com/v2/movie/subject/" + $scope.id,{},function(data) {
 				$scope.movie = data;
 				$scope.$apply();
-				console.log($scope.movie);
 			})
 		}])
 })(angular);
