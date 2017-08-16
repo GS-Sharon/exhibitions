@@ -1,0 +1,56 @@
+<!--案例：放大镜-->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>放大镜</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .box {
+            margin: 100px;
+            width: 780px;
+            position: relative;
+        }
+        .yellowblock {
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+            opacity: .5;
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .smallbox {
+            width: 350px;
+            border: solid 1px #ccc;
+        }
+        .bigbox {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 400px;
+            height: 400px;
+            background: url(images/0001.jpg) no-repeat 0 0;
+            overflow: hidden;
+            border: solid 1px #ccc;
+            display: none;
+
+        }
+    </style>
+    <script src="js/slider.js"></script>
+</head>
+<body>
+<div class="box" id="box">
+    <div class="smallbox">
+        <span class="yellowblock"></span>
+        <img src="images/001.jpg" alt=""/>
+    </div>
+    <div class="bigbox">
+    </div>
+</div>
+</body>
+</html>

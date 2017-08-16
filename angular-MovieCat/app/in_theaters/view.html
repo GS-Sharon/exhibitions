@@ -1,0 +1,51 @@
+<h1>{{title}}</h1>
+<div ng-if="message">{{message}}</div>
+<!--展示热映列表-->
+<div class="list-group">
+	<a href="#" class="list-group-item" ng-repeat="item in data.subjects">
+		<span class="badge">{{data.subjects[$index].rating.average}}</span>
+		<ul class="media-list">
+			<li class="media">
+				<div class="media-left">
+					<img class="media-object" ng-src="{{data.subjects[$index].images.small}}" alt="...">
+				</div>
+				<div class="media-body">
+					<h3 class="media-heading">{{data.subjects[$index].title}}</h3>
+					<p><span ng-repeat="director in data.subjects[$index].directors">导演：{{director.name}}<span ng-if="!$last">、</span></span></p>
+					<p><span>类型：{{data.subjects[$index].genres.join("、")}}</span></p>
+				</div>
+			</li>
+		</ul>
+	</a>
+</div>
+<div ng-show="!loading">
+	<p>总共：{{data.subjects.length}}条；{{pageCount}}页</p>
+	<nav aria-label="...">
+		<ul class="pager">
+			<li><a ng-click="go(page-1)">上一页</a></li>
+			<li><a ng-click="go(+page+1)">下一页</a></li>
+		</ul>
+	</nav>
+</div>
+
+<!--加载动画-->
+<div class="spinner" ng-show="loading">
+	<div class="spinner-container container1">
+		<div class="circle1"></div>
+		<div class="circle2"></div>
+		<div class="circle3"></div>
+		<div class="circle4"></div>
+	</div>
+	<div class="spinner-container container2">
+		<div class="circle1"></div>
+		<div class="circle2"></div>
+		<div class="circle3"></div>
+		<div class="circle4"></div>
+	</div>
+	<div class="spinner-container container3">
+		<div class="circle1"></div>
+		<div class="circle2"></div>
+		<div class="circle3"></div>
+		<div class="circle4"></div>
+	</div>
+</div>

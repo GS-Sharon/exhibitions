@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>路由+本地缓存</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body ng-app="myapp">
+<section class="todoapp">
+    <ng-view></ng-view>
+    <!--路由模板-->
+    <script type="text/ng-template" id="templ_a">
+        <header class="header">
+            <h1>todos</h1>
+            <form ng-submit="submitTask()">
+                <input class="new-todo" placeholder="What needs to be done?" ng-model="text" autofocus>
+            </form>
+        </header>
+        <section class="main">
+            <input class="toggle-all" id="toggle-all" type="checkbox">
+            <label for="toggle-all">Mark all as complete</label>
+            <ul class="todo-list">
+                <li ng-repeat="item in list | filter:selector" ng-class="{completed:item.complicated,editing:item.key}">
+                    <div class="view">
+                        <input class="toggle" type="checkbox" ng-model="item.complicated" ng-change="save()">
+                        <label ng-dblclick="ck(item)">{{item.task}}</label>
+                        <button class="destroy" ng-click="remove(item)"></button>
+                    </div>
+                    <form>
+                        <input class="edit" ng-blur="blur(item)" ng-model="item.task">
+                    </form>
+                </li>
+            </ul>
+        </section>
+        <!-- This footer should hidden by default and shown when there are todos -->
+        <footer class="footer">
+            <!-- This should be `0 items left` by default -->
+            <span class="todo-count"><strong>{{list.length}}</strong> item left</span>
+            <!-- Remove this if you don't implement routing -->
+            <ul class="filters">
+                <li ng-click="selectAll()">
+                    <a ng-class="{selected:selector.complicated == undefined}" href="#/">All</a>
+                </li>
+                <li ng-click="active()">
+                    <a href="#/active" ng-class="{selected:selector.complicated == false}">Active</a>
+                </li>
+                <li ng-click="completed()">
+                    <a href="#/completed" ng-class="{selected:selector.complicated == true}">Completed</a>
+                </li>
+            </ul>
+            <!-- Hidden if no completed items are left ↓ -->
+            <button class="clear-completed" ng-click="clear()">Clear completed</button>
+        </footer>
+    </script>
+</section>
+<footer class="info">
+    <p>Double-click to edit a todo</p>
+    <!-- Remove the below line ↓ -->
+    <p>Template by <a href="http://sindresorhus.com">Sindre Sorhus</a></p>
+    <!-- Change this out with your name and url ↓ -->
+    <p>Created by <a href="http://todomvc.com">you</a></p>
+    <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+</footer>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script>
+    (function(angular) {
+        'use strict';
+        angular.module("myapp",["ngRoute"])
+//                路由
+                .config(["$routeProvider",function($routeProvider) {
+                    $routeProvider
+                            .when("/:role?",{
+                                controller:"myController",
+                                templateUrl: "templ_a"
+                            })
+                }])
+//                控制器
+                .controller("myController",["$scope","$routeParams","$window",function($scope,$routeParams,$window) {
+//                初始默认选项内容
+                    var normalList = [
+                        {id:1,task:"学习",complicated: false,key:false},
+                        {id:2, task:"睡觉",complicated: false,key:false},
+                        {id:3, task:"看电影",complicated: true,key:false}
+                    ];
+ //                    本地存储
+                    $scope.storage = $window.localStorage;
+                    $scope.list = $scope.storage["my_list"] ? JSON.parse($scope.storage["my_list"]) : normalList;
+                    console.log($scope.list)
+//                双击选项
+                    $scope.ck = function(item) {
+                        item.key = item.key == false ? true : false;
+                    };
+
+//                选项双击后失焦
+                    $scope.blur = function(item) {
+                        item.key = item.key == true ? false : true;
+                    };
+
+//                判断id是否重复
+                    $scope.getId = function() {
+                        var id = Math.random();
+                        for(var i=0; i<$scope.list.length; i++) {
+                            if($scope.list[i].id == id) {
+                                $scope.getId();
+                            }
+                        }
+                        return id;
+                    };
+
+//                根据输入的内容生成新选项
+                    $scope.submitTask = function() {
+                        $scope.list.push({
+                            id: $scope.getId(),
+                            task: $scope.text,
+                            complicated: false,
+                            key: false
+                        });
+//                    清空输入框
+                        $scope.text = "";
+                        $scope.save();
+                        console.log($scope.list)
+                        console.log($scope.storage["my_list"])
+                    };
+
+//                删除选项
+
+                    $scope.remove = function(item) {
+                        for(var i=0; i<$scope.list.length; i++) {
+                            if($scope.list[i].id == item.id) {
+                                $scope.list.splice(i,1);
+                            }
+                        }
+                        $scope.save();
+                    };
+
+//                清除全部已经完成的选项
+                    $scope.clear = function() {
+                        var i = 0;
+                        while(i < $scope.list.length) {
+                            if($scope.list[i].complicated == true) {
+                                $scope.remove($scope.list[i]);
+                                i = 0;
+                            }else{
+                                i++;
+                            }
+                        }
+                        $scope.save();
+                    };
+
+//                    保存本地数据
+                    $scope.save = function() {
+                        $scope.storage["my_list"] = angular.toJson($scope.list);
+                        console.log($scope.list)
+                    };
+
+//                    根据$routeParams来判断应该筛选complicated的什么值
+                    switch($routeParams.role) {
+                        case "active" :
+                            $scope.selector = {complicated : false};
+                            break;
+                        case "completed" :
+                            $scope.selector = {complicated : true};
+                            break;
+                        default :
+                            $scope.selector = {};
+                            break;
+                    }
+                }])
+    })(angular);
+</script>
+</body>
+</html>

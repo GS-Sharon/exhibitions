@@ -1,0 +1,504 @@
+.banxin{
+    width: 1000px;
+    margin: 0 auto;
+}
+a:hover{
+    color: #CD0200!important;
+    text-decoration: underline;
+}
+/*顶部 B*/
+.top{
+    overflow: hidden;
+}
+.top div:first-child{
+    background-color: #373737;
+    height: 3px;
+}
+.top .pic{
+    margin-top: 10px;
+}
+.top .resigter{
+    height: 30px;
+    margin: 5px auto;
+}
+.resigter ul{
+    width: 600px;
+    padding: 10px 0;
+    margin-left: 150px;
+}
+.resigter li{
+    float: left;
+    padding-left: 18px;
+    margin-left: 30px;
+    color: #666666;
+    font: normal 10px "微软雅黑";
+}
+.resigter li a:hover{
+    color: #CD0200;
+    text-decoration: underline;
+}
+.resigter em{
+    color: #CCCCCC;
+}
+.resigter .li1,.top .resigter .li2{
+    padding-left: 12px;
+    margin-left: 5px;
+    background: url(../images/icon.png) no-repeat 0 3px;
+}
+.resigter .li4{
+    margin-left: 20px;
+    background: url(../images/icon.png) no-repeat 0 -32px;
+}
+.resigter .li5{
+    background: url(../images/icon.png) no-repeat 0 -63px;
+}
+.resigter .li6{
+    background: url(../images/icon.png) no-repeat 0 -197px;
+}
+.resigter .right a{
+    display: inline-block;
+    font: normal 15px "微软雅黑";
+    width: 66px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+.resigter .right a:first-child{
+    color: #666666;
+}
+.resigter .right a:last-child{
+    color: #fff;
+    background-color: #0F92D6;
+    border-radius: 5px;
+    font-weight: bold;
+}
+/*顶部 E*/
+
+/*Logo B*/
+.logo{
+    background-color: #0A70B1;
+}
+.logo h1{
+    text-indent: -5000px;
+    background: url(../images/logo.png) no-repeat;
+    float: left;
+}
+.logo h1 a{
+    display: block;
+    width: 186px;
+    height: 73px;
+}
+.logo dl{
+    float: left;
+    background: url(../images/navLine.png) repeat-y right 0;
+    padding: 0 20px;
+    margin-top: 14px;
+}
+.logo dd:last-child{
+    margin-top: 10px;
+}
+.logo dd a{
+    display: inline-block;
+    margin-left: 15px;
+    color: #D6EBF9;
+    font-size: 14px;
+}
+.logo dd a:hover{
+    text-decoration: underline;
+}
+.logo dd a:first-child{
+    font-weight: bold;
+    color: #fff;
+    margin-left: 0;
+}
+/*Logo E*/
+
+.content .top{
+    margin: 20px 0;
+}
+.leftcon{
+    width: 750px;
+}
+.rightcon{
+     width: 250px;
+ }
+/*左边内容 B*/
+.leftcon .left{
+    width: 340px;
+}
+.leftcon .right{
+    margin-left: 40px;
+}
+.leftcon .left h3{
+    border-top: solid 1px #E6E6E6;
+    height: 35px;
+}
+.leftcon .left .aleft{
+    border-top: solid 2px #2CA9E1;
+    display: block;
+    height: 25px;
+    margin-top: -2px;
+    padding-top: 10px;
+}
+.leftcon .left .aleft a{
+    font: 16px "微软雅黑";
+}
+.leftcon .left .aright{
+    margin-top: 10px;
+    color: #5F789E;
+    font-size: 10px;
+}
+.leftcon .right h4 a{
+    font-size: 16px;
+    color: #295285;
+}
+.leftcon .right dl{
+    margin-top: 15px;
+}
+.leftcon .right dd a{
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #002244;
+}
+/*yearPart年会 B*/
+.yearpart .left{
+    height: 252px;
+    overflow: hidden;
+    position: relative;
+}
+.yearpart .left ul{
+    height: 227px;
+    width: 500%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.yearpart .left ul li{
+    float: left;
+}
+.yearpart .left .counts{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.yearpart .counts li{
+    width: 10px;
+    height: 10px;
+    background-color: #C5C5C5;
+    margin-left: 10px;
+    float: left;
+}
+.yearpart .counts .turnblue{
+    background-color: #4C99E8;
+}
+.yearpart .explain{
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    font: normal 18px "微软雅黑";
+    color: #fff;
+    padding-left: 10px;
+}
+.yearpart .left .forback{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -36px;
+}
+.yearpart .forback div{
+    width: 32px;
+    height: 72px;
+    color: #fff;
+    font: 28px "黑体";
+    text-align: center;
+    line-height: 72px;
+    background-color: #000;
+    cursor: pointer;
+}
+.yearpart .right dl{
+    margin-top: 14px;
+}
+.yearpart .right dl:first-child{
+    margin-top: 0;
+}
+.yearpart .right dd{
+    height: 26px;
+    line-height: 26px;
+}
+.yearpart .right a{
+    color: #172C45;
+    font-size: 14px;
+}
+.yearpart .right a:hover{
+    color: #CD0200;
+    text-decoration: underline;
+}
+.yearpart .right h4 a{
+    color: #295285;
+    font: bold 18px "微软雅黑";
+}
+.yearpart .right h4 a:hover{
+    color: #CD0200;
+}
+/*yearPart年会 E*/
+
+/*Oversea海外看中国 B*/
+.oversea{
+    margin-top: 20px;
+}
+.oversea .left h4{
+    margin-top: 15px;
+    border-left: 3px solid #ECA95A;
+    padding: 12px 5px;
+}
+.oversea .left h4 a{
+    font: 16px "微软雅黑";
+    color: #295285;
+    margin-bottom: 10px;
+}
+.oversea .left ul li{
+    margin-top: 7px;
+}
+.oversea .left ul span{
+    display: inline-block;
+    color: #fff;
+    background-color: #ECA95A;
+    font-size: 15px;
+    padding: 1px 5px;
+    margin-right: 3px;
+}
+.oversea .left ul li a{
+    color: #000;
+    font-size: 14px;
+}
+.oversea .left ul li a:hover{
+    color: #CD0200;
+}
+.oversea .right{
+    border-top: solid 2px #E6E6E6;
+}
+/*Oversea海外看中国 E*/
+/*环球博览 B*/
+.earthread{
+    margin-top: 20px;
+}
+.earthread .picListArea li{
+    float: left;
+    width: 160px;
+    margin-top: 10px;
+}
+.earthread .picListArea li:last-child{
+    margin-left: 20px;
+}
+.earthread .picListArea li a{
+    display: block;
+    color: #002244;
+    line-height: 22px;
+    text-align: center;
+}
+.earthread .newsbox{
+    padding: 20px 0;
+}
+.earthread .newsbox li{
+    height: 30px;
+}
+.earthread .newsbox a{
+    font-size: 14px;
+    line-height: 30px;
+    color: #002244;
+}
+/*环球博览 E*/
+.newsbox1 .left,.newsbox1 .right{
+    border-top: solid 2px #E6E6E6;
+    padding-top: 20px;
+}
+.newsbox1 .left li{
+    height: 28px;
+}
+.newsbox1 .left li a{
+    line-height: 28px;
+    font-size: 14px;
+    color: #002244;
+}
+/*左边内容 E*/
+
+/*右边内容 B*/
+.rightcon .aright{
+    margin-top: 12px;
+}
+.rightcon .aleft{
+    display: inline-block;
+    border-top: solid 2px #2CA9E1;
+    margin-top: -1px;
+    padding-top: 10px;
+}
+.rightcon .aleft a{
+    font: 16px "微软雅黑";
+    color: #2B2B2B;
+}
+.rightcon h3{
+    border-top: 1px solid #E6E6E6;
+}
+.rightcon h4{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.rightcon h4 a{
+    color: #295285;
+    font: 16px "Microsoft YaHei";
+}
+.rightcon h4 a:hover{
+    color: #CD0200;
+    text-decoration: underline;
+}
+/*1_环球今日评 B*/
+.rightcon .huanqiu{
+    width: 250px;
+}
+.rightcon .huanqiu .aleft{
+    text-indent: -5000px;
+    width: 105px;
+    height: 35px;
+    background: url(../images/index.png) no-repeat;
+}
+.rightcon .huanqiu ul{
+    margin-top: 15px;
+    padding-bottom: 10px;
+}
+.rightcon .huanqiu li{
+    height: 28px;
+}
+.rightcon .huanqiu li a{
+    font-size: 15px;
+    color: #002244;
+}
+.rightcon .huanqiu li a:hover{
+    font-size: 15px;
+    color: #CD0200;
+}
+/*1_环球今日评 E*/
+
+/*2_第一话题 B*/
+.rightcon .firsttopic{
+    width: 250px;
+    margin-top: 20px;
+}
+.vote{
+    margin-bottom: 20px;
+}
+.vote div{
+    width: 250px;
+    height: 27px;
+    position: relative;
+}
+.vote div:first-child{
+    margin-top: 15px;
+}
+.vote div:last-child{
+    margin-top: 5px;
+}
+
+.vote .bar1,.vote .bar2{
+    width: 0;
+    height: 27px;
+    display: block;
+    position: absolute;
+    line-height: 27px;
+    color: #fff;
+}
+.vote .ratecount{
+    position: absolute;
+    top: 4px;
+    color: #E6B422;
+}
+.vote .bar1{
+    background: url(../images/index.png) no-repeat 0 -255px;
+}
+.vote .bar2{
+    background: url(../images/index.png) no-repeat 0 -290px;
+}
+.vote button{
+    font-size: 14px;
+    color: #fff;
+    background-color: #5E5E5E;
+    padding: 3px 5px;
+    border-radius: 3px;
+}
+/*2_第一话题 B*/
+
+/*3_新闻搜索 B*/
+.newsearch{
+    margin-top: 20px;
+}
+.newsearch .search{
+    width: 250px;
+    height: 40px;
+    background: url(../images/index.png) no-repeat 0 -45px;
+    margin-top: 10px;
+    position: relative;
+}
+.newsearch .search input{
+    width: 200px;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 12px;
+    text-align: center;
+    padding-left: 10px;
+    background-color: #F0F0F0;
+}
+.newsearch .hotnews a{
+    display: inline-block;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: #ECA95A;
+}
+.newsearch .hotnews a:hover{
+    color: #fff!important;
+}
+/*3_新闻搜索 E*/
+
+/*环球论坛 B*/
+.huanforum{
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+.huanforum ul{
+    padding-top: 8px;
+}
+.huanforum ul li{
+    height: 30px;
+}
+.huanforum li a{
+    color: #002244;
+    line-height: 30px;
+    font-size: 14px;
+}
+/*环球论坛 E*/
+/*右边内容 E*/
+
+.advancebox{
+    width: 484px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+.closebox{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.close{
+    background-color: #000;
+    cursor: pointer;
+    color: #fff!important;
+    font-size: 10px;
+}

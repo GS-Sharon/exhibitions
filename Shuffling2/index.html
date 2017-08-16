@@ -1,0 +1,66 @@
+<!--案例：焦点图-->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>焦点图</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .box {
+            margin: 150px auto;
+            width: 490px;
+            height: 170px;
+            overflow: hidden;
+            position: relative;
+        }
+        .box ul {
+            width: 500%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .box ul li {
+            list-style: none;
+            float: left;
+        }
+        .box ol {
+            position: absolute;
+            left: 50%;
+            bottom: 10px;
+        }
+        .box ol li {
+            list-style: none;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            margin-left: 10px;
+            color: #000;
+            background: orange;
+            float: left;
+            border-radius: 100%;
+            cursor: pointer;
+        }
+        .box ol li.change {
+            background-color: red;
+            color: #fff;
+        }
+    </style>
+    <script src="js/slider.js"></script>
+</head>
+<body>
+<div class="box" id="box">
+    <ul>
+        <li><img src="images/01.jpg" alt=""/></li>
+        <li><img src="images/02.jpg" alt=""/></li>
+        <li><img src="images/03.jpg" alt=""/></li>
+        <li><img src="images/04.jpg" alt=""/></li>
+        <li><img src="images/05.jpg" alt=""/></li>
+    </ul>
+    <ol></ol>
+</div>
+</body>
+</html>

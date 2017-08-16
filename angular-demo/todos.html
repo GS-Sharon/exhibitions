@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body ng-app="myapp">
+<section class="todoapp" ng-controller="myController">
+    <header class="header">
+        <h1>todos</h1>
+        <form ng-submit="submitTask()">
+            <input class="new-todo" placeholder="What needs to be done?" ng-model="text" autofocus>
+        </form>
+    </header>
+    <section class="main">
+        <input class="toggle-all" id="toggle-all" type="checkbox">
+        <label for="toggle-all">Mark all as complete</label>
+        <ul class="todo-list">
+            <li ng-repeat="item in list track by $index" ng-class="{completed:item.complicated,editing:item.key}">
+                <div class="view">
+                    <input class="toggle" type="checkbox" ng-model="item.complicated">
+                    <label ng-dblclick="ck(item)">{{item.task}}</label>
+                    <button class="destroy" ng-click="remove(item)"></button>
+                </div>
+                <form>
+                    <input class="edit" ng-blur="blur(item)" ng-model="item.task">
+                </form>
+            </li>
+        </ul>
+    </section>
+    <!-- This footer should hidden by default and shown when there are todos -->
+    <footer class="footer">
+        <!-- This should be `0 items left` by default -->
+        <span class="todo-count"><strong>{{list.length}}</strong> item left</span>
+        <!-- Remove this if you don't implement routing -->
+        <ul class="filters">
+            <li ng-click="selectAll()">
+                <a class="selected" href="#">All</a>
+            </li>
+            <li ng-click="active()">
+                <a href="#/active">Active</a>
+            </li>
+            <li ng-click="completed()">
+                <a href="#/completed">Completed</a>
+            </li>
+        </ul>
+        <!-- Hidden if no completed items are left ↓ -->
+        <button class="clear-completed" ng-click="clear()">Clear completed</button>
+    </footer>
+</section>
+<footer class="info">
+    <p>Double-click to edit a todo</p>
+    <!-- Remove the below line ↓ -->
+    <p>Template by <a href="http://sindresorhus.com">Sindre Sorhus</a></p>
+    <!-- Change this out with your name and url ↓ -->
+    <p>Created by <a href="http://todomvc.com">you</a></p>
+    <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+</footer>
+<script src="bower_components/angular/angular.js"></script>
+<script>
+    angular.module("myapp",[])
+            .controller("myController",["$scope",function($scope) {
+//                双击选项
+                $scope.ck = function(item) {
+                    item.key = item.key == false ? true : false;
+                };
+
+//                选项双击后失焦
+                $scope.blur = function(item) {
+                    item.key = item.key == true ? false : true;
+                };
+
+//                判断id是否重复
+                $scope.getId = function() {
+                    var id = Math.random();
+                    for(var i=0; i<$scope.list.length; i++) {
+                        if($scope.list[i].id == id) {
+                            $scope.getId();
+                        }
+                    }
+                    return id;
+                };
+
+//                根据输入的内容生成新选项
+                $scope.submitTask = function() {
+                    $scope.oldList.push({
+                        id: $scope.getId(),
+                        task: $scope.text,
+                        complicated: false,
+                        key: false
+                    });
+                    $scope.list = $scope.oldList;
+//                    清空输入框
+                    $scope.text = "";
+                };
+
+//                删除选项
+
+                $scope.remove = function(item) {
+                    for(var i=0; i<$scope.list.length; i++) {
+                        if($scope.list[i].id == item.id) {
+                            $scope.list.splice(i,1);
+                            $scope.oldList.splice(i,1);
+                        }
+                    }
+                };
+
+                $scope.remove1 = function(item) {
+                    for(var i=0; i<$scope.list.length; i++) {
+                        if($scope.list[i].id == item.id) {
+                            $scope.list.splice(i,1);
+                        }
+                    }
+                };
+
+//                选择全部选项
+                $scope.selectAll = function() {
+                    $scope.list = $scope.oldList;
+                };
+
+
+                var activearr = $scope.activearr = [];
+                var completedarr = $scope.completedarr = [];
+                var y = false;
+
+//                选择要执行的任务
+                $scope.active = function() {
+                    activearr = [];
+                    for(var i=0; i<$scope.oldList.length; i++) {
+                        if($scope.oldList[i].complicated == false) {
+                            activearr.push($scope.oldList[i]);
+                        }else {
+                            completedarr.push($scope.oldList[i]);
+                        }
+                    }
+                    $scope.list = activearr;
+                    y = true;
+                    };
+
+//                选择显示已经执行完的任务
+                $scope.completed = function() {
+                    completedarr = [];
+                    for(var i=0; i<$scope.oldList.length; i++) {
+                        if($scope.oldList[i].complicated == false) {
+                            activearr.push($scope.oldList[i]);
+                        }else{
+                            completedarr.push($scope.oldList[i]);
+                        }
+                    }
+                    $scope.list = completedarr;
+                    y = true;
+                };
+
+//                清除全部已经完成的选项
+                $scope.clear = function() {
+                    var arr = [];
+                    var i = 0;
+                    while(i < $scope.list.length) {
+                        if($scope.list[i].complicated == true) {
+                            $scope.remove1($scope.list[i]);
+                            i = 0;
+                        }else{
+                            i++;
+                        }
+                    }
+                    for(var k=0; k<$scope.oldList.length; k++) {
+                        if($scope.oldList[k].complicated == false) {
+                            arr.push($scope.oldList[k]);
+                        }
+                    }
+                    $scope.oldList = arr;
+                };
+
+//                选项内容
+                $scope.list = [
+                    {id:1,task:"学习",complicated: false,key:false},
+                    {id:2, task:"睡觉",complicated: false,key:false},
+                    {id:3, task:"看电影",complicated: true,key:false}
+                ];
+                $scope.oldList = $scope.list;
+            }])
+</script>
+</body>
+</html>

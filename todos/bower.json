@@ -1,0 +1,23 @@
+{
+  "name": "angular-demo",
+  "authors": [
+    "GS-Sharon <1277421642@qq.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "angular": "1.4.9",
+    "angular-route": "1.4.9"
+  }
+}

@@ -1,0 +1,55 @@
+<!--案例：无缝滚动-->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>无缝滚动</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .clearfix {
+            zoom: 1;
+        }
+        .clearfix:after {
+            content: "";
+            height: 0;
+            line-height: 0;
+            visibility: hidden;
+            clear: both;
+            display: block;
+        }
+        .box{
+            margin: 150px auto;
+            width: 600px;
+            height: 204px;
+            overflow: hidden;
+            position: relative;
+        }
+        .box ul {
+            width: 1800px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .box li {
+            float: left;
+            list-style: none;
+        }
+    </style>
+    <script src="js/slider.js"></script>
+</head>
+<body>
+<div class="box" id="box">
+    <ul class="clearfix">
+        <li><img src="images/01.jpg" alt=""/></li>
+        <li><img src="images/02.jpg" alt=""/></li>
+        <li><img src="images/03.jpg" alt=""/></li>
+        <li><img src="images/04.jpg" alt=""/></li>
+        <li><img src="images/01.jpg" alt=""/></li>
+        <li><img src="images/02.jpg" alt=""/></li>
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>路由配置</title>
+</head>
+<body ng-app="myapp">
+<ul>
+    <!--给定href，即点击的时候在当前链接后面添加href的内容，但时不会进行跳转-->
+    <li><a href="#/a">A</a></li>
+    <li><a href="#/b">B</a></li>
+    <li><a href="#/c">C</a></li>
+</ul>
+<!--利用ng-view元素或者是有ng-view指令的元素作为载入不同页面中的部分内容的元素-->
+<ng-view></ng-view>
+<script src="../bower_components/angular/angular.js"></script>
+<script src="../bower_components/angular-route/angular-route.js"></script>
+<script>
+    //    提供ng模块的ngRoute依赖
+    angular.module("myapp",["ngRoute"])
+            .config(["$routeProvider",function($routeProvider) {
+                $routeProvider
+//                        当满足$location.path() == "/a"的时候，利用templateUrl指定页面跳转的链接，使用controller指定控制器的名称
+                        .when("/a", {
+                            controller:"myControllerA",
+                            templateUrl: "a.html"
+                        })
+                        .when('/b',{
+                            controller:"myControllerB",
+                            templateUrl: "b.html"
+                        })
+                        .when("/c",{
+                            controller: "myControllerC",
+                            templateUrl: "c.html"
+                        }).
+//                        设置除了上面when的情况，其他的情况需要执行的内容
+                        otherwise({
+                            redirectTo:"/a"
+                        });
+            }])
+            .controller("myControllerA",["$scope",function($scope) {
+                $scope.title = "This is A";
+            }])
+            .controller("myControllerB",["$scope",function($scope) {
+                $scope.title = "This is B";
+            }])
+            .controller("myControllerC",["$scope",function($scope) {
+                $scope.title = "This is C";
+            }])
+</script>
+</body>
+</html>

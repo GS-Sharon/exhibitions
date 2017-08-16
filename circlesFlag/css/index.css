@@ -1,0 +1,380 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background: url(../image/bg.jpg);
+}
+@font-face {
+    font-family: Special;
+    src: url(../fonts/k3k702ZOKiLJc3WVjuplzOgdm0LZdjqr5-oayXSOefg.woff2);
+}
+.box {
+    width: 840px;
+    margin: 50px auto;
+}
+li {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    list-style: none;
+    float: left;
+    margin: 30px;
+    position: relative;
+}
+.cir {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: solid 20px rgba(255,255,255,.5);
+    box-sizing: border-box;
+    background: url(../image/bg1.png) no-repeat;
+    background-clip: border-box;/*默认是border-box*/
+    background-origin: border-box;/*默认是padding-box*/
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 2s;
+}
+li .showcir {
+    width: 220px;
+    height: 220px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    padding: 40px;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(34,151,156,.8);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+li .showcir p:first-of-type {
+    font-size: 10px;
+    border-top: solid 1px #fff;
+    padding-top: 5px;
+}
+li .showcir a:last-of-type {
+    text-decoration: none;
+    opacity: .9;
+    font: 12px  "Special";
+    color: #fff;
+}
+li .showcir a:last-of-type:hover {
+    color: rgba(242,222,44,1);
+}
+li h3 {
+    font: 24px "Special";
+    padding: 10px 0 0 0;
+    margin-bottom: 20px;
+}
+/*第一个圆形*/
+li .cir1 {
+    background-image: url(../image/bg1.png);
+}
+li:first-child:hover .cir1 {
+    border: solid 0 rgba(255,255,255,0);
+}
+li .showcir1 {
+    transform: scale(0);
+    opacity: 0;
+    transition: all 1s;
+}
+li:first-child:hover .showcir1 {
+    opacity: 1;
+    transform: scale(1);
+}
+/*第二个圆形*/
+li .cir2 {
+    background-image: url(../image/bg4.jpg);
+}
+li .showcir2 {
+    background-color: transparent;
+    transform: scale(0);
+    position: relative;
+    z-index: 2;
+    transition: all .5s;
+    transition-delay: .2s;
+}
+li:nth-child(2)::before {
+    content: "";
+    display: block;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-Index: 1;
+    border: solid 0 rgba(207,74,65,.3);
+    transition: all .5s;
+}
+li:nth-child(2):hover .showcir2 {
+    transform: scale(1);
+}
+li:nth-child(2):hover::before {/*伪元素的hover使用方法，因为伪元素是直接归属于该元素的，所以不用空格*/
+    border: solid 110px rgba(207,74,65,.3);
+}
+/*第三个圆形*/
+li .cir3 {
+    background-image: url(../image/bg16.jpg);
+}
+li .showcir3 {
+    width: 180px;
+    height: 180px;
+    background-image: url(../image/bg.jpg);
+    left: 20px;
+    top: 20px;
+    padding: 20px 20px 0 20px;
+    perspective: 700px;
+}
+li .showcir3 h3 {
+    font-size: 16px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,1);
+}
+li .showcir3 h3, li .showcir3 p, .showcir3 a {
+    position: relative;
+    z-Index: 1;
+}
+li .showcir3::before, li .showcir3::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(247,133,92,.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+}
+li .showcir3::before {
+    opacity: 0;
+    transition: all 1s;
+}
+li .showcir3::after {
+    background-image: url(../image/bg16.jpg);
+    background-size: 220px 220px;
+    background-position: -20px -20px;
+    transition: transform 1s;/*注意此处，3d转换如果出现位移差，那么就要指定只有transform作为过渡元素*/
+    transform-origin: 0 180px;
+    z-index: 2;
+    box-shadow: 0 0 5px rgba(0,0,0,.3) inset;
+}
+li:nth-child(3):hover .showcir3::before {
+    opacity: 1;
+}
+li:nth-child(3):hover .showcir3::after {
+    transform: rotateX(-180deg);
+    transform-origin: 0 180px;
+}
+/*第四个圆形*/
+li .cir4 {
+    background-image: url(../image/bg14.jpg);
+}
+li .showcir4 {
+    background-color: #223E87;
+    width: 180px;
+    height: 180px;
+    padding: 20px;
+    left: 20px;
+    top: 20px;
+    opacity: 0;
+    transform: scale(1.5) translateZ(100px);
+    transition: all .8s;
+    transition-delay: .2s;
+    position: absolute;
+    z-index: 3;
+}
+/*li .showcir4 h3, li.showcir4 p, li .showcir4 a {*/
+/*z-Index:1;*/
+/*}*/
+li:nth-child(4)::before, li:nth-child(4)::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    background-clip: content-box;
+    background-origin: border-box;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: solid 20px transparent;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+}
+li:nth-child(4)::before {
+    background-image: url(../image/bg.jpg);
+    z-Index: 1;
+}
+li:nth-child(4)::after {
+    background-image: url(../image/bg14.jpg);
+    background-repeat: no-repeat;
+    z-index: 2;
+    transform: scale(1);
+    transition: all 1s;
+}
+li .showcir4 a:last-of-type {
+    color:#E7615E;
+    font-weight: bold;
+}
+li .showcir4 a:last-of-type:hover {
+    color:#fff;
+}
+li:nth-child(4):hover::after {
+    transform: scale(0);
+}
+li:nth-child(4):hover .showcir4 {
+    opacity: 1;
+    transform: scale(1) translateZ(0);
+}
+/*第五个圆形*/
+li .cir5{
+    background-image: url(../image/bg11.jpg);
+    border: solid 20px transparent;
+}
+li .showcir5 {
+    background-color: #000;
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 20px;
+    transform: rotateY(-180deg);
+    transition: all 1s;
+    z-index: 3;
+    transform-style: preserve-3d;
+}
+li .showcir5 h3 {
+    font-size: 16px;
+}
+li:nth-child(5)::before, li:nth-child(5)::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    border: solid 20px transparent;
+    background-clip: content-box;
+}
+li:nth-child(5)::before {
+    background-image: url(../image/bg.jpg);
+    z-Index: 1;
+}
+li:nth-child(5)::after {
+    background-color: rgba(255,255,255,.3);
+    background-clip: border-box;
+    z-index: 2;
+    transition: all .5s;
+}
+li .showcir5::before {
+    content: "";
+    display: block;
+    background-image: url(../image/bg11.jpg);
+    background-size: 220px 220px;
+    background-origin: border-box;
+    background-position: -20px -20px;
+    transform: rotateY(-180deg) translateZ(.1px);
+    transition: all 1s;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 4;
+}
+li:nth-child(5):hover .showcir5 {
+    transform: rotateY(0deg);
+}
+li:nth-child(5):hover::after {
+    background-color: rgba(255, 255, 255, .9);
+    transform: scale(.82);
+}
+/*第六个圆形*/
+li .cir6 {
+    background-image: url(../image/bg7.jpg);
+    position: relative;
+    transition: all .5s;
+    transform-origin: 200px 82px;
+}
+li .cir6::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #000000;
+    border-radius: 50%;
+    position: absolute;
+    top: 62px;
+    right: -10px;
+}
+li .showcir6 {
+    background-image: url(../image/noise.png);
+    background-color: #C64B29;
+}
+li .showcir6 h3 {
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 0;
+    text-shadow: 1px 1px 2px #000;
+}
+li .showcir6 a:last-of-type {
+    font-size: 10px;
+    display: block;
+    width: 60px;
+    height: 60px;
+    padding: 20px 10px 0;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,.3);
+    margin: 10px auto;
+    transform: rotate(45deg);
+    transform-origin: 40px 80px;
+    opacity: 0;
+    transition: all .3s;
+    transition-delay: .2s;
+}
+li .showcir6 a:last-of-type:hover {
+    background-color: rgba(255, 255, 255, .5);
+}
+li:nth-child(6):hover .showcir6 a:last-of-type {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+li:nth-child(6):hover .cir6 {
+    transform: rotate(-120deg);
+}
+/*第七个圆形*/
+li:nth-child(7) {
+    width: 180px;
+    height: 180px;
+    padding-bottom: 50px;
+}
+li .cir7 {
+    background-image: url(../image/bg20.jpg);
+    border: solid 20px rgba(0,0,0,.3);
+    opacity: 1;
+    transition: all .5s;
+    transform-origin: 110px 220px;
+    transform-style: preserve-3d;
+    position: relative;
+}
+li .showcir7 {
+    background-color: #000000;
+    position: absolute;
+    top: -240px;
+    left: -20px;
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+    transition: all .5s;
+}
+li:nth-child(7):hover .cir7 {
+    transform: rotateX(-90deg) translateY(110px);/*tranlateY是向下移动，一般以旋转元素的高度一般为宜，可以使得旋转更加自然*/
+}

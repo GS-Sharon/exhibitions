@@ -1,0 +1,47 @@
+<!--案例：时钟效果-->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时钟效果</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .box{
+            width: 600px;
+            height: 600px;
+            background: url(images/clock.jpg) no-repeat 0 0;
+            margin: 150px auto;
+            position: relative;
+        }
+        .shi,.fen,.miao {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background-repeat: no-repeat;
+            background-position: center 0;
+            top: 0;
+            left: 0;
+        }
+        .shi {
+            background-image: url(images/hour.png);
+        }
+        .fen {
+            background-image: url(images/minute.png);
+        }
+        .miao {
+            background-image: url(images/second.png);
+        }
+    </style>
+    <script src="js/slider.js"></script>
+</head>
+<body>
+<div class="box" id="box">
+    <div class="shi"></div>
+    <div class="fen"></div>
+    <div class="miao"></div>
+</div>
+</body>
+</html>

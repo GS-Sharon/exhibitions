@@ -1,0 +1,39 @@
+<!--小米手机上下自动滚动广告-->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>小米手机上下自动滚动广告</title>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .box {
+        width: 512px;
+        height: 400px;
+        margin: 150px auto;
+        overflow: hidden;
+        background: url(images/mi.png) no-repeat 0 0;
+    }
+    .top, .bottom {
+        width: 512px;
+        height: 200px;
+    }
+    .tips{
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top:80px;
+    }
+</style>
+<script src="js/slider.js"></script>
+</head>
+<body>
+<p class="tips">会跟随你的鼠标上滑下滑进行滚动</p>
+<div class="box" id="box">
+<div class="top"></div>
+<div class="bottom"></div>
+</div>
+</body>
+</html>
