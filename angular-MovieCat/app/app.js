@@ -4,6 +4,7 @@
 // Declare app level module which depends on views, and components
 	angular.module('moviecat', [
 		'ngRoute',
+		'movieDetails',
 		'movieList'
 	]).
 		config(['$routeProvider', function($routeProvider) {
