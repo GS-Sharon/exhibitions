@@ -17,7 +17,6 @@
 			if(typeof $scope.page == "undefined") {
 				$route.updateParams({page:1});
 			}
-			console.log($routeParams.category);
 			//设置一页有cont条
 			$scope.count = 10;
 			//设置请求从第start条开始
