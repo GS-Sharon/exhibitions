@@ -27,8 +27,8 @@
 				<li><a href="#">配置文件</a></li>
 				<li><a href="#">帮助</a></li>
 			</ul>
-			<form class="navbar-form navbar-right">
-				<input type="text" class="form-control" placeholder="搜索...">
+			<form class="navbar-form navbar-right" ng-controller="SearchController" ng-submit="search()">
+				<input type="text" class="form-control" placeholder="搜索..." ng-model="input">
 			</form>
 		</div>
 	</div>
