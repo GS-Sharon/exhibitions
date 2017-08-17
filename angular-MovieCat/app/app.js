@@ -6,11 +6,10 @@
 		'ngRoute',
 		'movieDetails',
 		'movieList'
-	]).
-		config(['$routeProvider', function($routeProvider) {
+	]).config(['$routeProvider', function($routeProvider) {
 			$routeProvider.otherwise({redirectTo: '/in_theaters/1'});
 		}])
-		.controller("NavController",['$scope','$location',function($scope,$location) {
+	.controller("NavController",['$scope','$location',function($scope,$location) {
 			$scope.loc = $location;
 			if($scope.loc.path().startsWith("/in_theaters")) {
 				$scope.type = "in_theaters";
@@ -29,5 +28,10 @@
 				}
 			})
 		}])
+	.controller("SearchController",["$scope","$route",function($scope,$route) {
+			$scope.input = "";
+			$scope.search = function() {
+				$route.updateParams({category:"search",page:"",q:$scope.input});
+			};
+		}])
 })(angular);
-
