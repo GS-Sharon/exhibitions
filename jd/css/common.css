@@ -1,0 +1,27 @@
+html,body,h1,h2,h3,h4,p,img,ol,ul,li,dl,dt,dd,form{
+	margin:0;
+	padding:0;
+}
+img{display:block;}
+body{
+	font-size: 12px;
+	color:#666666;
+	background-color: white;
+}
+h1,h2,h3,h4,b,strong{
+	font-weight: normal;
+}
+b{display: inline-block;}
+ul,ol,li{list-style: none;}
+img,input,select,option{
+	border:none;
+}
+a{
+	color:#666666;
+	font:normal 12px "宋体";
+	text-decoration: none;
+}
+a:hover{
+	color:#B61D1D;
+	text-decoration: none;
+}

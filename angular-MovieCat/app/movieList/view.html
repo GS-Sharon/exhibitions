@@ -1,0 +1,52 @@
+<h1>{{title}}</h1>
+<div class="list-group">
+	<a href="#/detail/{{item.id}}" class="list-group-item" ng-repeat="item in data.subjects track by $index">
+		<span class="badge">{{item.rating.average}}</span>
+		<ul class="media-list">
+			<li class="media">
+				<div class="media-left">
+					<img class="media-object" ng-src="{{item.images.small}}" alt="...">
+				</div>
+				<div class="media-body">
+					<h3 class="media-heading">{{item.title}}</h3>
+					<p>导演：<span ng-repeat="director in item.directors">{{director.name}}{{$last ? "" : "、"}}</span></p>
+					<p>主演：<span ng-repeat="actor in item.casts">{{actor.name + ($last ? "" : "、")}}</span></p>
+				</div>
+			</li>
+		</ul>
+	</a>
+</div>
+
+<div ng-show="!loading">
+	<p>总共：{{data.total}}条；{{page}}/{{pagecount}}页</p>
+
+	<!--分页-->
+	<nav aria-label="...">
+		<ul class="pager">
+			<li><a ng-click="go(page - 1)">上一页</a></li>
+			<li><a ng-click="go(+page+1)">下一页</a></li>
+		</ul>
+	</nav>
+</div>
+
+<!--加载中loading-->
+<div class="spinner" ng-show="loading">
+	<div class="spinner-container container1">
+		<div class="circle1"></div>
+		<div class="circle2"></div>
+		<div class="circle3"></div>
+		<div class="circle4"></div>
+	</div>
+	<div class="spinner-container container2">
+		<div class="circle1"></div>
+		<div class="circle2"></div>
+		<div class="circle3"></div>
+		<div class="circle4"></div>
+	</div>
+	<div class="spinner-container container3">
+		<div class="circle1"></div>
+		<div class="circle2"></div>
+		<div class="circle3"></div>
+		<div class="circle4"></div>
+	</div>
+</div>

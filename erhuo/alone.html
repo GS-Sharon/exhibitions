@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>详情页</title>
+<link href="css/showAlone.css" rel="stylesheet" type="text/css" />
+<script src="jquery-1.8.3-min.js" type="text/javascript"></script>
+</head>
+
+  <body class="minScreen">
+  <div class="topBar"></div>
+      <div id="header" class="siteNav header_nav">
+       <div class="wrap clearFix">
+          <a href="" class="home f1">贰货首页</a>
+          <ul class="header_top">
+            <li class="s1 show_oth"><a href="">注册</a></li>
+            <li class="s1 show_oth"><a href="">登录</a></li>
+            <li class="s1 has_line shopCart"><a href="" class="cart_info_wrap"><span class="cart_info">购物车
+                  <i class="icon"></i>
+                  <div class="shopcart empty_cart">
+                  <span class="shopcart_loading">购物车里没有商品</span>
+                  </div>
+            </span></a>
+            </li>
+            <li class="s1 myorder has_line"><a href="" class="display_u">我的订单</a></li>
+            <li class="s1 service has_line"><a href="" class="display_u">客户服务</a></li>
+          </ul>
+       </div>
+      </div>
+  <div id="body_wrap">
+      <div class="detail-primary clearFix">
+        <div class="primary-goods">
+          <div class="clearFix">
+            <div class="f1 goods-info goods-info-normal" id="J_GoodsInfo">
+              <div class="info-box">
+                <h1 class="goods-title">
+                <span itemprop="name">夏装新款重工绣花满幅绣花花瓣领V领上衣衬衣</span></h1>
+                <div class="goods-prowrap goods-main">
+                  <div class="clearFix main-box">
+                    <dl class="clearFix property-box">
+                      <dt class="property-type property-type-origin">原价：</dt>
+                      <dd class="property-cont property-cont-origin">
+                        <span id="J_OriginPrice" class="price">￥438.00</span>
+                      </dd>
+                    </dl>
+                    <dl class="clearFix property-box">
+                      <dt class="property-type property-type-now">现价：</dt>
+                      <dd class="property-cont property-cont-now f1">
+                        <span id="J_NowPrice" class="price">￥158.00</span>
+                      </dd>
+                      <dd class="property-extra fr">
+                        <span class="mr10">
+                        "评论："
+                         <span class="num">0</span>
+                        </span>
+                      </dd>
+                    </dl>
+                    <div id="J_ModulePromotions"></div>
+                  </div>
+                </div>
+                <div class="goods-prowrap goods-im">
+                  <dl class="clearFix">
+                    <dt>客服：</dt>
+                    <dd>
+                      <div class="mlstalk_widget_btn">联系卖家</div>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="goods-prowrap goods-sku" id="J_GoodsSku">
+                  <div class="content">
+                    <div class="pannel-title"></div>
+                    <div class="box">
+                      <dl class="style clearFix" style=" display:block">
+                        <dt>成色：</dt>
+                        <dd>八成新</dd>
+                      </dl>
+                      <dl class="style clearFix" style=" display:block">
+                        <dt>地区：</dt>
+                        <dd>广州市天河区广东技术师范学院本部</dd>
+                      </dl>
+                    </div>
+                    <div class="pannel-action"></div>
+                  </div>
+                  <div class="goods-buy clearFix">
+                    <a href="" id="J_BuyNow" class="f1 mr10 buy-btn buy-now">立刻购买</a>
+                    <input type="hidden" id="dapeiShow"/>
+                    <a href="" id="J_BuyNCart" class="f1 mr10 buy-cart buy-btn">加入购物车</a>
+                  </div>
+                </div>
+                <div class="goods-social clearFix">
+                  <div class=" fav  item" goodsid="0" tradeitemid="1gkm3x8" tid="0">
+                    <b></b>
+                    <span class="fav-num">14</span>
+                  </div>
+                  <div class="share item">
+          			<b></b>分享
+      			  </div>
+                </div>
+                <div class="clearFix"></div>
+                <div class="goods-extra clearFix">
+                  <div class="extra-services">
+                    <div class="f1 clearFix label">服务承诺：</div>
+                      <ul class="f1 clearFix list">
+                        <li class="item">
+    					 <span class="link">
+                    		<img src="image/checkGoods.png" width="24" height="24" />
+                    			当场验货
+                		  </span>
+            			 </li>
+                         <li class="item">
+ 						  <span class="link">
+                    		<img src="image/backGoods.png" width="24" height="24" />
+                   				无理由退货
+               			  </span>
+           			 	 </li>
+                       </ul>
+    				</div>
+                </div>
+              </div>
+            </div>
+            <div class="f1 goods-topimg" id="J_GoodsImg">
+            <div class="big-img">
+ 			    <button class="middle">
+              <img id="J_BigImg" src="image/goodsS1.jpg" data-main="image/goodsS1.jpg" alt="魅典,夏装,幻镜,新款,重工" width="400" />
+          	    </button>
+           </div>
+           <div id="J_SmallImgs" class="small-img">
+          <div class="box">
+              <div class="list" style=" margin-bottom:20px">
+                 <ul class="clearfix" style="text-align: center;">
+                  <li class="">
+                  <img src="image/smallS1.jpg">
+                  <i></i></li>
+                  <li class="">
+                  <img src="image/smallS2.jpg">
+                  <i></i></li>
+                  <li class="c">
+                  <img  src="image/smallS3.jpg"><i></i></li>
+                  <li class="">
+                  <img src="image/smallS4.jpg"><i></i></li>
+                  </ul>
+              </div>
+          </div>
+          <a class="left-btn arrow-btn" href="javascript:;"></a>
+          <a class="right-btn arrow-btn" href="javascript:;"></a>
+      </div>
+          </div>
+          </div>
+        </div>
+        <div class="primary-slide">
+        <!--右侧热卖栏-->
+        </div>
+     <div class="detial-content">
+       <div class="col-top">
+        <!-- 搭配购 -->
+        <div class="module-dapei" id="J_ModuleDapei"></div>
+       </div>
+       <!--主题-->
+       <div class="col-main">
+         <!--模板标签页-->
+         <div class="module-tabpanel" id="J_Module Tabpanel">
+         <!--选项栏-->
+           <div class="tabbar-box ui-fixed">
+             <ul class="tabbar-list clearfix" >
+               <li data-panels="graphic,recommend" data-hasnav="true" class="tab-graphic selected" id="detail">
+                  <a href="javascript:;">商品详情</a>
+                </li>
+                <li data-panels="rates" data-hasnav="false">
+                   <a href="javascript:;" id="contact">路过留言
+                   <em></em></a>
+                 </li>
+                </ul>
+           </div>
+           <!--选项页-->
+           <div class="panel-box">
+           <!--图文详情-->
+            <div class="module-panel module-graphic" id="J_ModuleGraphic"> 
+           <!--商品描述-->
+            <div class="graphic-block">
+             <div id="J_Graphic_穿着效果">
+             <div id="xiaoguo">
+               <div class="panel-title">
+                <h1>穿着效果</h1>
+                </div>
+              <!--描述-->
+              <div class="graphic-pic">
+               <div class="pic-box" style="padding-bottom:150%;">
+                <img class="lazy" style="left: -350px; display: block;" data-original="image/dressX1.jpg" src="image/dressX1.jpg">
+                 </div>
+               <div class="graphic-pic">
+                 <div class="pic-box" style="padding-bottom:135.5%;">
+                  <img class="lazy" style="display: block;left:-350px" data-original="image/dressX2.jpg" src="image/dressX2.jpg"/>
+                  </div>
+                 </div>
+               <div class="graphic-pic">
+                <div class="pic-box" style="padding-bottom:131%;">
+                 <img class="lazy" style="left: -350px; display: block;" data-original="image/dressX3.jpg" src="image/dressX3.jpg">
+                 </div>
+                </div>
+               </div>
+               </div>
+              <div class="module-panel module-rates" id="J_ModuleRates">
+              <!--买家留言-->
+              <div id="J_RatesBuyer">
+              如遇到以下情况可能是诈骗行为：<span style="color:red">1.宝贝价格过低 2.卖家要求QQ交流 3.卖家要求直接付款</span>
+   				 <div class="panel-title rates-title">
+        			<h1>留言</h1>
+    			 </div>
+    		<!-- 买家留言 -->
+    		 	 <div class="rates-buyer">
+                	<div class="module-empty">
+                      <input type="text" id="txt1" style="width:755px;height:50px; margin-bottom:20px"/>
+                      <input type="button" id="but" style="height:52px" value="留言"/>
+                      <textarea id="area" rows="20" cols="150" value="这里是留言区" readonly="readonly"></textarea>
+              		</div>
+			  </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          </div>
+         </div>
+       </div>
+     </div>
+      </div>
+  
+  </div>
+  <script>
+  $(function(){
+	  var detail=$("#detail");
+	  var contact=$("#contact");
+	  detail.click(function(){
+		  $("#detail").addClass("tab-graphic selected");
+		  $("#contact").removeClass("tab-graphic selected");
+		  $("#contact").css({"backgroundColor":"#F6F6F6","borderTop":"none"});
+		  $("#J_RatesBuyer").css({"disaplay":"none"});
+		  $("#xiaoguo").css({"display":"block"}) 
+		  });
+	contact.click(function(){
+		  $("#contact").addClass("tab-graphic selected");
+		  $("#detail").removeClass("tab-graphic selected");
+		  $("#contact").css({"backgroundColor":"white","borderTop":"4px solid #10C2FE"});
+		  $("#J_RatesBuyer").css({"disaplay":"block"});
+		  $("#xiaoguo").css({"display":"none"}) 
+		  })
+		
+		$("#but").click(function(){
+			var tx1=$("#txt1")[0].value;
+			$("#area")[0].innerHTML=tx1;
+			})
+		
+	  })
+  </script>
+</body>
+</html>

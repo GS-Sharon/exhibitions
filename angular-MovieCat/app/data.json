@@ -1,0 +1,221 @@
+{
+  "count": 3,
+  "start": 0,
+  "total": 56,
+  "subjects": [
+	{
+	  "rating": {
+		"max": 10,
+		"average": 7.6,
+		"stars": "40",
+		"min": 0
+	  },
+	  "genres": [
+		"动作"
+	  ],
+	  "title": "战狼2",
+	  "casts": [
+		{
+		  "alt": "https://movie.douban.com/celebrity/1000525/",
+		  "avatars": {
+			"small": "https://img3.doubanio.com/img/celebrity/small/39105.jpg",
+			"large": "https://img3.doubanio.com/img/celebrity/large/39105.jpg",
+			"medium": "https://img3.doubanio.com/img/celebrity/medium/39105.jpg"
+		  },
+		  "name": "吴京",
+		  "id": "1000525"
+		},
+		{
+		  "alt": "https://movie.douban.com/celebrity/1100321/",
+		  "avatars": {
+			"small": "https://img1.doubanio.com/img/celebrity/small/1415801312.29.jpg",
+			"large": "https://img1.doubanio.com/img/celebrity/large/1415801312.29.jpg",
+			"medium": "https://img1.doubanio.com/img/celebrity/medium/1415801312.29.jpg"
+		  },
+		  "name": "弗兰克·格里罗",
+		  "id": "1100321"
+		},
+		{
+		  "alt": "https://movie.douban.com/celebrity/1274840/",
+		  "avatars": {
+			"small": "https://img3.doubanio.com/img/celebrity/small/1401440361.14.jpg",
+			"large": "https://img3.doubanio.com/img/celebrity/large/1401440361.14.jpg",
+			"medium": "https://img3.doubanio.com/img/celebrity/medium/1401440361.14.jpg"
+		  },
+		  "name": "吴刚",
+		  "id": "1274840"
+		}
+	  ],
+	  "collect_count": 233529,
+	  "original_title": "战狼2",
+	  "subtype": "movie",
+	  "directors": [
+		{
+		  "alt": "https://movie.douban.com/celebrity/1000525/",
+		  "avatars": {
+			"small": "https://img3.doubanio.com/img/celebrity/small/39105.jpg",
+			"large": "https://img3.doubanio.com/img/celebrity/large/39105.jpg",
+			"medium": "https://img3.doubanio.com/img/celebrity/medium/39105.jpg"
+		  },
+		  "name": "吴京",
+		  "id": "1000525"
+		}
+	  ],
+	  "year": "2017",
+	  "images": {
+		"small": "https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p2485983612.jpg",
+		"large": "https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2485983612.jpg",
+		"medium": "https://img3.doubanio.com/view/movie_poster_cover/spst/public/p2485983612.jpg"
+	  },
+	  "alt": "https://movie.douban.com/subject/26363254/",
+	  "id": "26363254"
+	},
+	{
+	  "rating": {
+		"max": 10,
+		"average": 4.3,
+		"stars": "25",
+		"min": 0
+	  },
+	  "genres": [
+		"爱情",
+		"奇幻"
+	  ],
+	  "title": "三生三世十里桃花",
+	  "casts": [
+		{
+		  "alt": "https://movie.douban.com/celebrity/1049732/",
+		  "avatars": {
+			"small": "https://img3.doubanio.com/img/celebrity/small/38640.jpg",
+			"large": "https://img3.doubanio.com/img/celebrity/large/38640.jpg",
+			"medium": "https://img3.doubanio.com/img/celebrity/medium/38640.jpg"
+		  },
+		  "name": "刘亦菲",
+		  "id": "1049732"
+		},
+		{
+		  "alt": "https://movie.douban.com/celebrity/1276051/",
+		  "avatars": {
+			"small": "https://img3.doubanio.com/img/celebrity/small/1435567211.65.jpg",
+			"large": "https://img3.doubanio.com/img/celebrity/large/1435567211.65.jpg",
+			"medium": "https://img3.doubanio.com/img/celebrity/medium/1435567211.65.jpg"
+		  },
+		  "name": "杨洋",
+		  "id": "1276051"
+		},
+		{
+		  "alt": "https://movie.douban.com/celebrity/1276171/",
+		  "avatars": {
+			"small": "https://img3.doubanio.com/img/celebrity/small/1370330521.5.jpg",
+			"large": "https://img3.doubanio.com/img/celebrity/large/1370330521.5.jpg",
+			"medium": "https://img3.doubanio.com/img/celebrity/medium/1370330521.5.jpg"
+		  },
+		  "name": "罗晋",
+		  "id": "1276171"
+		}
+	  ],
+	  "collect_count": 79442,
+	  "original_title": "三生三世十里桃花",
+	  "subtype": "movie",
+	  "directors": [
+		{
+		  "alt": "https://movie.douban.com/celebrity/1274347/",
+		  "avatars": {
+			"small": "https://img1.doubanio.com/img/celebrity/small/17758.jpg",
+			"large": "https://img1.doubanio.com/img/celebrity/large/17758.jpg",
+			"medium": "https://img1.doubanio.com/img/celebrity/medium/17758.jpg"
+		  },
+		  "name": "赵小丁",
+		  "id": "1274347"
+		},
+		{
+		  "alt": "https://movie.douban.com/celebrity/1289344/",
+		  "avatars": {
+			"small": "https://img1.doubanio.com/img/celebrity/small/45049.jpg",
+			"large": "https://img1.doubanio.com/img/celebrity/large/45049.jpg",
+			"medium": "https://img1.doubanio.com/img/celebrity/medium/45049.jpg"
+		  },
+		  "name": "安东尼·拉默里纳拉",
+		  "id": "1289344"
+		}
+	  ],
+	  "year": "2017",
+	  "images": {
+		"small": "https://img1.doubanio.com/view/movie_poster_cover/ipst/public/p2494279388.jpg",
+		"large": "https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2494279388.jpg",
+		"medium": "https://img1.doubanio.com/view/movie_poster_cover/spst/public/p2494279388.jpg"
+	  },
+	  "alt": "https://movie.douban.com/subject/25823277/",
+	  "id": "25823277"
+	},
+	{
+	  "rating": {
+		"max": 10,
+		"average": 0,
+		"stars": "00",
+		"min": 0
+	  },
+	  "genres": [
+		"剧情",
+		"历史"
+	  ],
+	  "title": "建军大业",
+	  "casts": [
+		{
+		  "alt": "https://movie.douban.com/celebrity/1000572/",
+		  "avatars": {
+			"small": "https://img3.doubanio.com/img/celebrity/small/43.jpg",
+			"large": "https://img3.doubanio.com/img/celebrity/large/43.jpg",
+			"medium": "https://img3.doubanio.com/img/celebrity/medium/43.jpg"
+		  },
+		  "name": "刘烨",
+		  "id": "1000572"
+		},
+		{
+		  "alt": "https://movie.douban.com/celebrity/1312699/",
+		  "avatars": {
+			"small": "https://img1.doubanio.com/img/celebrity/small/1414489207.88.jpg",
+			"large": "https://img1.doubanio.com/img/celebrity/large/1414489207.88.jpg",
+			"medium": "https://img1.doubanio.com/img/celebrity/medium/1414489207.88.jpg"
+		  },
+		  "name": "朱亚文",
+		  "id": "1312699"
+		},
+		{
+		  "alt": "https://movie.douban.com/celebrity/1255860/",
+		  "avatars": {
+			"small": "https://img3.doubanio.com/img/celebrity/small/1415028529.74.jpg",
+			"large": "https://img3.doubanio.com/img/celebrity/large/1415028529.74.jpg",
+			"medium": "https://img3.doubanio.com/img/celebrity/medium/1415028529.74.jpg"
+		  },
+		  "name": "黄志忠",
+		  "id": "1255860"
+		}
+	  ],
+	  "collect_count": 229,
+	  "original_title": "建军大业",
+	  "subtype": "movie",
+	  "directors": [
+		{
+		  "alt": "https://movie.douban.com/celebrity/1106979/",
+		  "avatars": {
+			"small": "https://img1.doubanio.com/img/celebrity/small/1403267018.07.jpg",
+			"large": "https://img1.doubanio.com/img/celebrity/large/1403267018.07.jpg",
+			"medium": "https://img1.doubanio.com/img/celebrity/medium/1403267018.07.jpg"
+		  },
+		  "name": "刘伟强",
+		  "id": "1106979"
+		}
+	  ],
+	  "year": "2017",
+	  "images": {
+		"small": "https://img1.doubanio.com/view/movie_poster_cover/ipst/public/p2493892158.jpg",
+		"large": "https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2493892158.jpg",
+		"medium": "https://img1.doubanio.com/view/movie_poster_cover/spst/public/p2493892158.jpg"
+	  },
+	  "alt": "https://movie.douban.com/subject/26692823/",
+	  "id": "26692823"
+	}
+  ],
+  "title": "正在上映的电影-北京"
+}

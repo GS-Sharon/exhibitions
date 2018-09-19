@@ -1,0 +1,88 @@
+<!--案例：仿网易轮播图-->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>仿网易轮播图</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .box {
+            width: 310px;
+            height: 220px;
+            margin: 150px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .picbox {
+            position: relative;
+        }
+        .picbox div {
+            position: absolute;
+            top: 0;
+            left: 310px;
+        }
+        .bar {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        .bar ol {
+            margin-top: 200px;
+            padding-left: 50%;
+        }
+        .bar li.normalbut, .bar li.bluebut{
+            float: left;
+            margin-left: 5px;
+            list-style: none;
+            width: 24px;
+            height: 10px;
+            background: url(images/icon.png) no-repeat -24px -790px;
+        }
+        .bar li.bluebut {
+            background: url(images/icon.png) no-repeat -24px -770px;
+        }
+        .leftbut, .rightbut {
+            list-style: none;
+            width: 30px;
+            height: 45px;
+            background: url(images/icon.png) no-repeat 0 0;
+            position: absolute;
+            top: 50%;
+            margin-top: -23px;
+            opacity: .5;
+        }
+        .leftbut {
+            left: 5px;
+        }
+        .rightbut {
+            background: url(images/icon.png) no-repeat 0 -45px;
+            right: 5px;
+        }
+    </style>
+    <script src="js/slider.js"></script>
+</head>
+<body>
+<div class="box" id="box">
+    <div class="picbox">
+        <div><img src="" alt=""/></div>
+        <div><img src="" alt=""/></div>
+        <div><img src="" alt=""/></div>
+        <div><img src="" alt=""/></div>
+        <div><img src="" alt=""/></div>
+        <div><img src="" alt=""/></div>
+        <div><img src="" alt=""/></div>
+    </div>
+    <div class="bar">
+        <ol>
+            <li class="leftbut"></li>
+            <li class="rightbut"></li>
+        </ol>
+    </div>
+</div>
+</body>
+</html>

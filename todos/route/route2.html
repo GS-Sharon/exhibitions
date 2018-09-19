@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>路由方式2</title>
+</head>
+<body ng-app="myapp">
+<ul>
+    <li><a href="#/a">A</a></li>
+    <li><a href="#/b">B</a></li>
+    <li><a href="#/c">C</a></li>
+</ul>
+<ng-view></ng-view>
+<!--如果不是type="text/javascript"则不是使用js语法，在script中出错的话是不会有提示或者是在页面上有显示的，所以可以使用这个方式来实现模板，但是要给定id，以便后面的路由的模板引用url可以引用script的id-->
+<script type="text/ng-template" id="templ_a">
+    <h1>{{title}}</h1>
+</script>
+<script src="../bower_components/angular/angular.js"></script>
+<script src="../bower_components/angular-route/angular-route.js"></script>
+<script>
+    angular.module("myapp",["ngRoute"])
+            .config(["$routeProvider",function($routeProvider) {
+                $routeProvider
+                        .when("/a",{
+                            controller : "myControllerA",
+                            templateUrl : "templ_a"
+                        })
+                        .when("/b",{
+                            controller: "myControllerB",
+                            templateUrl: "templ_a"
+                        })
+                        .when("/c",{
+                            controller: "myControllerC",
+                            templateUrl: "templ_a"
+                        })
+                        .otherwise({
+//                            重定向
+                            redirectTo: "/a"
+                        })
+            }])
+            .controller("myControllerA",["$scope",function($scope) {
+                $scope.title = "This is A";
+            }])
+            .controller("myControllerB",["$scope",function($scope) {
+                $scope.title = "This is B";
+            }])
+            .controller("myControllerC",["$scope",function($scope) {
+                $scope.title = "This is C";
+            }])
+</script>
+</body>
+</html>
